@@ -4,7 +4,7 @@ pipeline {
     stage('meven install') {
       steps {
         withMaven(maven: 'maven3') {
-          sh 'mvn clean install'
+          sh 'mvn -f my-app/pom.xml clean install'
         }
       }
     }
